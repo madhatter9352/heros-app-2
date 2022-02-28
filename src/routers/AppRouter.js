@@ -14,6 +14,5 @@ export const AppRouter = () => {
             <Route path="/login" element={<LoginScreen />} />
         </Routes>
     </BrowserRouter>
-    
   );
 };
