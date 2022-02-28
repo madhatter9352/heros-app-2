@@ -1,5 +1,6 @@
-import {heroes} from '../data/data.js';
+// eslint-disable-next-line import/extensions
+import { heroes } from '../data/data.js';
 
-const getHeroesByPublisher = (publisher) => {
-
+export const getHeroesByPublisher = (publisher) => {
+    return heroes.filter((hero) => hero.publisher === publisher);
 };

@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const heroes = [
     {
         'id': 'dc-batman',
@@ -159,4 +160,4 @@ export const heroes = [
         'first_appearance':'The Fantastic Four #48',
         'characters':'Norrin Radd'
     }
-]
+];
