@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { LoginScreen } from '../login/LoginScreen';
-import { Welcome } from '../welcome/Welcome';
+import { LoginScreen } from '../components/login/LoginScreen';
+import { Welcome } from '../components/welcome/Welcome';
 import { DashboardRoute } from './DashboardRoute';
 
 export const AppRouter = () => {

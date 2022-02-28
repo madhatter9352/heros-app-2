@@ -1,8 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
-import { MarvelScreen } from '../marvel/MarvelScreen';
-import { DCScreen } from '../DC/DcScreen';
-import { SearchScreen } from '../search/SearchScreen';
-import { Hero } from '../heros/Hero';
+import { MarvelScreen } from '../components/marvel/MarvelScreen';
+import { DCScreen } from '../components/DC/DcScreen';
+import { SearchScreen } from '../components/search/SearchScreen';
+import { Hero } from '../components/heros/Hero';
 
 export const DashboardRoute = () => {
   return (
