@@ -6,7 +6,7 @@ export const HerosCard = ({
     first_appearance,
     characters,
 }) => {
-    console.log(id, superhero, publisher, alter_ego, first_appearance, characters);
+    console.log('card', id, superhero, publisher, alter_ego, first_appearance, characters);
     return (
         <>
             <div className="card mb-3" style={{ maxWidth: '540px' }}>
