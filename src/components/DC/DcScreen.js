@@ -1,10 +1,13 @@
 import React from 'react';
-import { getHeroesByPublisher } from '../../selectors/getHerosByPublisher';
+import { HerosList } from '../heros/HerosList';
 
 export const DCScreen = () => {
-  const herosDc = getHeroesByPublisher('DC Comics');
-  console.log(herosDc);
+  
   return (
-    <div>DCScrenn</div>
+    <div>
+      <h1>DCScreen</h1>
+      <hr />
+      <HerosList publisher="DC Comics" />
+    </div>
   );
 };
