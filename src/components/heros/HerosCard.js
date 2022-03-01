@@ -1,5 +1,3 @@
-import './heroCard.scss';
-
 export const HerosCard = ({
     id,
     superhero,
@@ -10,31 +8,21 @@ export const HerosCard = ({
 }) => {
     console.log(id, superhero, publisher, alter_ego, first_appearance, characters);
     return (
-        <div className="example-2 card">
-            <div className="wrapper">
-                <div className="header">
-                    <div className="date">
-                    <span className="day">12</span>
-                    <span className="month">Aug</span>
-                    <span className="year">2016</span>
+        <>
+            <div className="card mb-3" style={{ maxWidth: '540px' }}>
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <img src="..." className="img-fluid rounded-start" alt="..." />
                     </div>
-                    <ul className="menu-content">
-                    <li>
-                        <a href="#" className="fa fa-bookmark-o" />
-                    </li>
-                    <li><a href="#" className="fa fa-heart-o"><span>18</span></a></li>
-                    <li><a href="#" className="fa fa-comment-o"><span>3</span></a></li>
-                    </ul>
-                </div>
-                <div className="data">
-                    <div className="content">
-                    <span className="author">Jane Doe</span>
-                    <h1 className="title"><a href="#">Stranger Things: The sound of the Upside Down</a></h1>
-                    <p className="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
-                    <a href="#" className="button">Read more</a>
+                    <div className="col-md-8">
+                    <div className="card-body">
+                        <h5 className="card-title">Card title</h5>
+                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
