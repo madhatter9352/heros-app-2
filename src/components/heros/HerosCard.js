@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const HerosCard = ({
     id,
     superhero,
@@ -18,6 +20,10 @@ export const HerosCard = ({
                         <p className="card-text">Alter Ego: {alter_ego}</p>
                         <p className="card-text">Characters: {characters}</p>
                         <p className="card-text"><small className="text-muted">{first_appearance}</small></p>
+
+                        <div>
+                            <Link to={`/hero/${id}`} className="btn btn-primary"> More Info </Link> 
+                        </div>
                     </div>
                     </div>
                 </div>
