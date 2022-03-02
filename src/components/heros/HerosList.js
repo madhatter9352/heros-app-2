@@ -7,14 +7,17 @@ export const HerosList = ({ publisher }) => {
   return (
     <div className="row">
         {
-            herosDc.map((hero) => (
-              <div className="col-sm-6">
-                <HerosCard 
-                  hero={hero}
-                  key={hero.id} 
-                />
-              </div>
-            ))
+            herosDc.map((hero) => {
+                return (
+                    <div className="col-sm-6">
+                        <HerosCard
+                            key={hero.id} 
+                            // eslint-disable-next-line react/jsx-props-no-spreading
+                            {...hero} 
+                        />
+                    </div>
+                );
+            })
         }
     </div>
   );

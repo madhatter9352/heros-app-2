@@ -1,24 +1,23 @@
 export const HerosCard = ({
     id,
     superhero,
-    publisher,
     alter_ego,
     first_appearance,
     characters,
 }) => {
-    console.log('card', id, superhero, publisher, alter_ego, first_appearance, characters);
     return (
         <>
             <div className="card mb-3" style={{ maxWidth: '540px' }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src="..." className="img-fluid rounded-start" alt="..." />
+                        <img src={`/assets/${id}.jpg`} className="img-fluid rounded-start" alt={superhero} />
                     </div>
                     <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                        <h5 className="card-title">{superhero}</h5>
+                        <p className="card-text">Alter Ego: {alter_ego}</p>
+                        <p className="card-text">Characters: {characters}</p>
+                        <p className="card-text"><small className="text-muted">{first_appearance}</small></p>
                     </div>
                     </div>
                 </div>
