@@ -1,18 +1,38 @@
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getHerosById } from '../../selectors/getHerosById';
 
 export const Hero = () => {
   const params = useParams();
+  const navigate = useNavigate();
   const { id } = params;
-  const { superhero, alter_ego, first_appearance } = getHerosById(id);
+  const hero = getHerosById(id);
+
+  if (!hero) {
+    return <Navigate to="/error" />;
+  }
+
+  const { superhero, alter_ego, first_appearance } = hero;
+
+  const handleBack = () => {
+    navigate(-1);
+  };
 
   return (
-    <div className="card bg-dark text-white">
-      <img src={`/assets/${id}.jpg`} className="card-img" alt="{superhero}" />
-      <div className="card-img-overlay">
+    <div className="card mb-3 mt-4" style={{ maxWidth: '340px' }}>
+      <img className="card-img-top" src={`/assets/${id}.jpg`} alt={superhero} />
+      <div className="card-body">
         <h5 className="card-title">{superhero}</h5>
         <p className="card-text">{alter_ego}</p>
-        <p className="card-text">{first_appearance}</p>
+        <p className="card-text"><small className="text-muted">{first_appearance}</small></p>
+
+        <div>
+          <button 
+            className="btn btn-primary"
+            onClick={handleBack}
+          > 
+            Back 
+          </button>
+        </div>
       </div>
     </div>
   );
