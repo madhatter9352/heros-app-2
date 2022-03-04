@@ -1,6 +1,16 @@
 import React from 'react';
+import { useForm } from '../hooks/useForm';
 
 export const SearchScreen = () => {
+  const initialForm = {
+    search: '',
+  };
+  const [formValues, handleInputChange] = useForm(initialForm);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log(formValues);
+  };
   return (
     <div>
       <h1>Search</h1>
@@ -8,7 +18,7 @@ export const SearchScreen = () => {
 
       <div className="row">
         <div className="col-sm-6">
-          <form>
+          <form onSubmit={handleSearch}>
             <div className="form-group">
               <input
                 type="text"
@@ -16,6 +26,8 @@ export const SearchScreen = () => {
                 id="search"
                 placeholder="Search"
                 name="search"
+                value={formValues.search}
+                onChange={handleInputChange}
               />
 
               <button 
